@@ -1,13 +1,188 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MP1</title>
-    </head>
-    <body>
-        <h1>Hello World! Welcome to MP1!</h1>
-        <img src="assets/image.jpg">
-    </body>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <title>GlobeTrek | Travel the World</title>
+
+    <!-- Webfont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Sticky, Resizing Navbar -->
+    <header id="site-header" class="header">
+      <nav class="nav container" aria-label="Primary">
+        <a class="brand" href="#hero">Globe<span>Trek</span></a>
+
+        <button class="nav__toggle" aria-expanded="false" aria-controls="navmenu">
+          <span class="sr-only">Menu</span>
+          <span class="burger"></span>
+        </button>
+
+        <ul id="navmenu" class="nav__menu">
+          <li><a class="nav__link" href="#hero">Home</a></li>
+          <li><a class="nav__link" href="#about">About</a></li>
+          <li><a class="nav__link" href="#destinations">Destinations</a></li>
+          <li><a class="nav__link" href="#carousel">Gallery</a></li>
+          <li><a class="nav__link" href="#parallax">Story</a></li>
+          <li><a class="nav__link" href="#video">Experience</a></li>
+          <li><a class="nav__link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="reading-progress"><span class="reading-progress__bar"></span></div>
+    </header>
+
+    <!-- HERO -->
+    <section id="hero" class="section section--hero center-xy">
+      <div class="container">
+        <h1 class="hero__title slide-in">Explore the World With Us</h1>
+        <p class="hero__subtitle fade-in">
+          Adventure starts here. Plan your dream trip today.
+        </p>
+        <div class="hero__cta">
+          <a class="btn" href="#destinations">Discover Destinations</a>
+          <button class="btn btn--ghost" data-open-modal="#bookingModal">Book Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section__title">Why Travel With GlobeTrek?</h2>
+        <p class="section__lead">
+          We design unforgettable journeys from tropical escapes to mountain
+          adventures. With curated trips, expert guides, and personalized
+          itineraries, you’ll travel worry-free and focus on memories.
+        </p>
+      </div>
+    </section>
+
+    <!-- MULTI-COLUMN DESTINATIONS -->
+    <section id="destinations" class="section section--alt">
+      <div class="container">
+        <h2 class="section__title">Top Destinations</h2>
+        <div class="columns">
+          <article class="card">
+            <h3 class="destination-title">Paris</h3>
+            <p>The City of Light — perfect for romance, culture, and fine dining.</p>
+          </article>
+          <article class="card">
+            <h3 class="destination-title">Bali</h3>
+            <p>Relax on white sandy beaches and explore breathtaking temples.</p>
+          </article>
+          <article class="card">
+            <h3 class="destination-title">New York</h3>
+            <p>The city that never sleeps, endless attractions and vibrant energy.</p>
+          </article>
+          <article class="card">
+            <h3 class="destination-title">Tokyo</h3>
+            <p>Experience futuristic tech, unique culture, and world-class cuisine.</p>
+          </article>
+          <article class="card">
+            <h3 class="destination-title">Dubai</h3>
+            <p>Modern luxury meets desert adventure and iconic skylines.</p>
+          </article>
+          <article class="card">
+            <h3 class="destination-title">Rome</h3>
+            <p>Walk through history, explore ancient ruins, and enjoy authentic pasta.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section id="carousel" class="section">
+      <div class="container">
+        <h2 class="section__title">Travel Gallery</h2>
+        <div class="slider">
+          <button class="slider__arrow slider__arrow--prev">‹</button>
+          <div class="slider__track">
+            <figure class="slide center-xy">
+              <img src="./assets/nyc.jpg" alt="New City" />
+              <figcaption>New York City, New York</figcaption>
+            </figure>
+            <figure class="slide center-xy">
+              <img src="./assets/dubai.jpg" alt="Dubai" />
+              <figcaption>Dubai, UAE</figcaption>
+            </figure>
+            <figure class="slide center-xy">
+              <img src="./assets/mumbai.jpg" alt="Mumbai"/>
+              <figcaption>Mumbai, India</figcaption>
+            </figure>
+          </div>
+          <button class="slider__arrow slider__arrow--next">›</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PARALLAX -->
+    <section id="parallax" class="section section--parallax center-xy">
+      <div class="container">
+        <h2 class="section__title section__title--on-dark">Your Story Awaits</h2>
+        <p class="section__lead section__lead--on-dark">
+          Each journey writes a new chapter. Start yours today.
+        </p>
+      </div>
+    </section>
+
+    <!-- VIDEO -->
+    <section id="video" class="section section--alt">
+    <div class="container">
+        <h2 class="section__title">Traveler’s Experience</h2>
+
+        <!-- Embedded video -->
+        <video class="video" controls>
+        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+        </video>
+    </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+    <div class="container">
+        <h2 class="section__title">Plan Your Trip</h2>
+        <p class="section__lead">Follow us on social media or get in touch!</p>
+        <div class="social">
+        <a class="social__link" href="#"><i class="fab fa-facebook-f"></i></a>
+        <a class="social__link" href="#"><i class="fab fa-instagram"></i></a>
+        <a class="social__link" href="#"><i class="fab fa-twitter"></i></a>
+        <a class="social__link" href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <small>© <span id="year"></span> GlobeTrek Travel. All rights reserved.</small>
+        <a class="to-top" href="#hero">↑</a>
+      </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div id="bookingModal" class="modal" aria-hidden="true">
+      <div class="modal__backdrop" data-close-modal></div>
+      <div class="modal__dialog">
+        <button class="modal__close" data-close-modal>×</button>
+        <h3>Book Your Adventure</h3>
+        <p>
+          Ready to travel? Fill out our booking form and one of our specialists
+          will contact you with the perfect itinerary.
+        </p>
+      </div>
+    </div>
+  </body>
 </html>
+
+
